@@ -5,10 +5,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+#getting google driver + removing interface (delete line 9,10 and arguments in webdriver.Chrome() if you wand to see the process)
 Options = Options()
 Options.headless = True
 driver = webdriver.Chrome(options=Options, executable_path="C:\Program Files (x86)\chromedriver.exe")
-
 driver.get("https://google.com/")
 wait = WebDriverWait(driver, 20)
 
