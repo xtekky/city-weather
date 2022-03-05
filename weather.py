@@ -3,9 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
+Options = Options()
+Options.headless = True
+driver = webdriver.Chrome(options=Options, executable_path="C:\Program Files (x86)\chromedriver.exe")
+
 driver.get("https://google.com/")
 wait = WebDriverWait(driver, 20)
 
@@ -50,7 +53,7 @@ def info():
     print('Precipitation: ', precipitation)
     print('Humidity: ', humidity)
 
-#city input
+#city and language input
 city = input('City: ')
 language = input('Language [en,fr,de]: ')
 if language != 'fr':
