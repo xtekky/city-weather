@@ -64,5 +64,8 @@ if language != 'fr':
 process()
 info()
 
+print('')
+print('Credits to: https://github.com/xtekky')
+
 #leave driver
 driver.quit()
