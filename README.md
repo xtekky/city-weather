@@ -4,4 +4,8 @@ Get a city's weather
 
 required library: selenium (pip install selenium)
 
+## Install and link chromedriver
+- go to https://chromedriver.chromium.org/downloads and install the right version
+- replace the chromedriver path in the code line 21
+
 Credits to: github.com/xtekky
